@@ -92,11 +92,11 @@
 
   /* color-1(#C73E1D)
    * color-2(#2F352B)
-   * color-3(#1A1A1A)
+   * color-3(#4AC76D)
    */
-    --color-1: hsla(12, 75%, 45%, 1);
+    --color-1: hsla(138, 54%, 53%, 1);
     --color-2: hsla(96, 10%, 19%, 1);
-    --color-3: hsla(0, 0%, 10%, 1);
+    --color-3: hsla(133, 76%, 84%, 1);
 
   /* theme color variations
    */
@@ -3875,7 +3875,7 @@ td:last-child {
  * ------------------------------------------------------------------- */
 .s-about {
     padding-top: var(--vspace-7);
-    color      : var(--color-3);
+    color      : var(--color-2-dark);
 }
 
 /* --------------------------------------------------------------------
@@ -4294,10 +4294,11 @@ td:last-child {
 .ss-copyright {
     margin     : 0 var(--vspace-2) 0 0;
     line-height: var(--vspace-0_875);
+    color: var(--color-2-dark);
 }
 
 .ss-copyright a {
-    color: var(--color-gray-5);
+    color: var(--color-2-darker);
 }
 
 .ss-copyright a:focus,
@@ -4447,11 +4448,9 @@ td:last-child {
 .card {
     width: 100%;
     height: 100%;
-    padding: 15px;
     border: 1px solid #ccc;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    color: white;
     text-align: center;
   }
   
