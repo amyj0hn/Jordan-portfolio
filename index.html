@@ -157,13 +157,17 @@
         <!-- # about
         ================================================== -->
         <section id="about" class="s-about target-section">
-
-            <div class="row s-about__content">
-                <div class="column xl-12">    
-                    
-                    <div class="section-header" data-num="01">
+                    <div class="column">
+                     <div class="section-header" id="about-me-heading" data-num="01">
                         <h2 class="text-display-title">About Me.</h2>
                     </div> <!-- end section-header -->
+                    </div>
+
+
+            <div class="row s-about__content">
+                <div class="column xl-6">    
+                    
+
 
                     <p class="attention-getter">
                         Hi, I’m Jordan — a passionate hairstylist and barber with 11 years of hands-on experience in the hair industry. My journey began at just 13, when I joined a school program out of curiosity. What started as a spark quickly turned into a full-blown passion for the art of hair. Over time, hairstyling and barbering became more than just a skill — they became my creative escape. I refined my craft by studying at a professional hairdressing academy and gaining real-world experience through an internship that set the foundation for the career I’ve built today.
@@ -174,7 +178,32 @@
                         Altogether, these parts of my life connect and reflect in my work. Whether I’m behind the chair or out in the world, I bring intention, passion, and artistry to everything I do.                    </p>
                     </p>
 
-                    <div class="grid-list-items s-about__blocks">
+                </div> <!--end column -->
+                       <div class="column xl-6">
+                          <video width="100%" id="myVideo" autoplay controls muted loop>
+        <source src="https://amyj0hn.github.io/project-images/images/jordan-video1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+                    </video>
+
+                    <!-- Javascript -->
+                     <script>
+  const video = document.getElementById("myVideo");
+  const startTime = 1;  // start at 5 seconds
+  const endTime = 19;   // end at 19 seconds
+
+  video.addEventListener("loadedmetadata", function () {
+    video.currentTime = startTime;
+  });
+
+   video.addEventListener("loadedmetadata", function () {
+    video.currentTime = startTime;})
+</script>
+
+                    </div>
+            </div> <!--end s-about__content -->
+
+                    <div class="column xl-12">
+                                       <div class="grid-list-items s-about__blocks">
 
                         <!-- <div class="grid-list-items__item s-about__block">
                             <h4 class="s-about__block-title">Awards</h4>
@@ -232,7 +261,7 @@
                                     Texture and length blending
                                 </li>
                                 <li>
-                                    Color application (balayage, highlights, all-over color, root touch-up)
+                                    Color application ( highlights, all-over color, root touch-up)
                                 </li>
 
                                 
@@ -243,22 +272,22 @@
                             <h4 class="s-about__block-title">Experience</h4>
                             <ul class="s-about__list">
                                 <li>
-                                    Bairnet Fair Barber Shop
+                                    Barnet Fair Barber Shop
                                     <span>Professional Gentz Hairstylist</span>
                                 </li>
                                 <li>
                                     Carlton Hair
                                     <span>Professional Hairstylist</span>
                                 </li>
-                                <!-- <li>
-                                    Google
-                                    <span>Lead UI Designer</span>
+                                <li>
+                                    Mr Barber SA
+                                    <span>Junior Barber</span>
                                 </li>
                                 <li>
-                                    Figma
-                                    <span>UI Designer</span>
+                                    Urban Cutz
+                                    <span>Junior Barber</span>
                                 </li>
-                                <li>
+                               <!-- <li>
                                     Microsoft
                                     <span>UI Designer</span>
                                 </li> -->
@@ -266,9 +295,8 @@
                         </div> 
 
                     </div> <!-- grid-list-items -->
+                    </div>
 
-                </div> <!--end column -->
-            </div> <!--end s-about__content -->
             
         </section> <!-- end s-about -->   
 

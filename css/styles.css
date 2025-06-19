@@ -96,7 +96,7 @@
    */
     --color-1: hsla(138, 54%, 53%, 1);
     --color-2: hsla(96, 10%, 19%, 1);
-    --color-3: hsla(133, 76%, 84%, 1);
+    --color-3: #b7f5c5;
 
   /* theme color variations
    */
@@ -2729,6 +2729,10 @@ td:last-child {
     padding-top  : 0.5em;
     margin-bottom: 0;
     position     : relative;
+}
+
+#about-me-heading{
+    margin-left: 55px;
 }
 
 .section-header::before {
