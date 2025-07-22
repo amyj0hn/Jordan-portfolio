@@ -1757,7 +1757,6 @@ ul,
 ol,
 dl,
 form,
-img,
 .video-container,
 .ss-custom-select {
     margin-bottom: var(--vspace-1);
@@ -3948,8 +3947,8 @@ td:last-child {
  *
  * ------------------------------------------------------------------- */
 .s-works {
-    padding-top   : var(--vspace-6);
-    padding-bottom: var(--vspace-1);
+    padding-top   : var(--vspace-3);
+    /* padding-bottom: var(--vspace-3); */
 }
 
 .folio-entries {
@@ -4449,7 +4448,7 @@ td:last-child {
 
 /* Image Carousel */
 /* From Uiverse.io by ashwin_5681 */ 
-.card {
+.work-card {
     width: 100%;
     height: 100%;
     border: 1px solid #ccc;
@@ -4458,7 +4457,7 @@ td:last-child {
     text-align: center;
   }
   
-  .card p {
+  .work-card p {
     font-size: 14px;
     color: white;
   }
@@ -4468,6 +4467,8 @@ td:last-child {
     height: var(--height);
     overflow: hidden;
     mask-image: linear-gradient(to right, transparent, #000 10% 90%, transparent);
+    margin-bottom: 50px;
+
   }
   .slider .list {
     display: flex;
@@ -4516,4 +4517,209 @@ td:last-child {
     }
   }
   
+/* From Uiverse.io by satyamchaudharydev */ 
+/* this card is inspired form this - https://georgefrancis.dev/ */
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.card {
+  --border-radius: 0.75rem;
+  --primary-color: #7257fa;
+  --secondary-color: #3c3852;
+  flex: 1 1 200px; /* 👈 makes it flexible */
+  max-width: 200px;
+  min-width: 160px;
+  font-family: "Arial";
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  background: #f1f1f3;
+  box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 3%);
+  color: #6e6b80;
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  transition: transform 0.3s ease;
+  height: auto;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card > * + * {
+  margin-top: 1.1em;
+}
+
+.card .card__content {
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.card .card__title {
+  padding: 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.card svg {
+  transition: 0.2s;
+}
+
+.card:hover .card__svg {
+  color: #b7f5c5;
+}
+
+.card:hover .card__arrow {
+  background: #111;
+}
+
+.card:hover .card__arrow svg {
+  transform: translateX(3px);
+}
+
+.card__svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__svg img {
+  filter: brightness(0) saturate(100%) invert(72%) sepia(22%) saturate(450%) hue-rotate(70deg) brightness(90%) contrast(85%);
+  width: 50px;
+  height: 50px;
+}
+
+
+/* Skills Responsive Layout */
+@media screen and (max-width: 768px) {
+  .container {
+    justify-content: center;
+  }
+
+  .card {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    width: 100%;
+  }
+}
+
+/* Experience timeline */
+.timeline-container {
+  padding: 2rem;
+}
+
+.timeline-title {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.timeline {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow-x: auto;
+  padding: 3rem 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: #82f186;
+  z-index: 0;
+}
+
+.timeline-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  min-width: 200px;
+  z-index: 1;
+}
+
+.timeline-item .content {
+  background:#f1f1f3 ;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 100%;
+  border:1px solid #888888;
+}
+
+.timeline-item.top {
+  flex-direction: column-reverse;
+  margin-bottom: 60px;
+}
+
+.timeline-item.bottom {
+  margin-top: 60px;
+}
+
+.timeline-item h5 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+  color: grey;
+}
+
+.timeline-item p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: grey;
+}
+
+/* 📱 Mobile Responsive Layout */
+@media screen and (max-width: 768px) {
+  .timeline {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+  }
+
+  .timeline::before {
+    top: initial;
+    left: 50%;
+    width: 3px;
+    height: 100%;
+    transform: translateX(-50%);
+  }
+
+  .timeline-item {
+    flex-direction: row;
+    min-width: auto;
+    width: 100%;
+    max-width: 400px;
+    margin: 2rem 0;
+  }
+
+  .timeline-item.top,
+  .timeline-item.bottom {
+    margin: 2rem 0;
+    flex-direction: row;
+  }
+
+
+  .timeline-item .content {
+    text-align: center;
+  }
+}
   
